@@ -1,0 +1,64 @@
+header.header {
+  background-color: var(--card);
+}
+
+/* Category SideBar */
+
+/* Top level links */
+/*div.sidebar-content > :is(sl-sidebar-state-persist, sl-sidebar-state-restore)
+  > ul > li
+  > a > span {
+  color: var(--foreground);
+}*/
+/*div.sidebar-content > :is(sl-sidebar-state-persist, sl-sidebar-state-restore)
+  > ul > li
+  > a[aria-current="page"] > span {
+  color: var(--background);
+}*/
+
+/* Menu drop down heading */
+/*aside.aside
+  > :is(sl-sidebar-state-persist, sl-sidebar-state-restore)
+  > ul
+  li > details > summary > span > span {
+  color: var(--foreground);
+}*/
+
+/* Menu down arrow */
+/*aside.aside > :is(sl-sidebar-state-persist, sl-sidebar-state-restore) > ul.top-level {
+  color: red;
+}*/
+
+/* Menu Link */
+div.sidebar-content > :is(sl-sidebar-state-persist, sl-sidebar-state-restore)
+  > ul > li > details
+  > ul > li 
+  a > span {
+  color: var(--muted-foreground);
+}
+div.sidebar-content > :is(sl-sidebar-state-persist, sl-sidebar-state-restore)
+  > ul > li > details
+  > ul > li 
+  a[aria-current="page"] > span {
+  color: var(--muted-background);
+}
+
+/* Topic Menu */
+
+/* Topic Links General */
+ul.starlight-sidebar-topics > li > a > div {
+  color: var(--muted-foreground);
+}
+
+/* Topic Links Active */
+a.starlight-sidebar-topics-current > div:nth-of-type(2) {
+  color: var(--foreground);
+}
+
+ul.starlight-sidebar-topics {
+  padding-top: 10px;
+}
+
+ul.starlight-sidebar-topics::after {
+  border-top: none;
+}

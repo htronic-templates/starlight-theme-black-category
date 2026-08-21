@@ -22,6 +22,7 @@
     "./styles/base": "./styles/base.css",
     "./styles/layers": "./styles/layers.css",
     "./styles/theme": "./styles/theme.css",
+    "./styles/custom": "./styles/custom.css",
     "./components": "./user-components.ts",
     "./overrides/*": "./overrides/*",
     "./package.json": "./package.json"

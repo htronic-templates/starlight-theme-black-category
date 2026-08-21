@@ -41,6 +41,7 @@ export default function starlightThemeBlack(userConfig: StarlightThemeBlackUserC
             'starlight-theme-black-category/styles/layers',
             'starlight-theme-black-category/styles/theme',
             'starlight-theme-black-category/styles/base',
+	    'starlight-theme-black-category/styles/custom',
           ],
           expressiveCode:
             starlightConfig.expressiveCode === false
