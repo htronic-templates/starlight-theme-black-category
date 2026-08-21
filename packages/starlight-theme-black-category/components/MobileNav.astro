@@ -1,13 +1,17 @@
 ---
 import { getNavbarLinks } from '../libs/navbar'
-const { sidebar } = Astro.locals.starlightRoute
+import SidebarTopics from 'starlight-sidebar-topics/components/Sidebar.astro'
 
+const { sidebar } = Astro.locals.starlightRoute
 const currentPath = Astro.url.pathname
 const navLinks = await getNavbarLinks(Astro.currentLocale)
 ---
 
 <div class="mobile-nav">
   <div class="mobile-nav-content">
+
+    <SidebarTopics />
+
     <div class="mobile-nav-section">
       <div class="mobile-nav-label">{Astro.locals.t('menuButton.accessibleLabel')}</div>
       <div class="mobile-nav-links">

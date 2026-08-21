@@ -1,10 +1,5 @@
 ---
-import SidebarSublist from './SidebarSublist.astro'
-import SidebarPersister from '@astrojs/starlight/components/SidebarPersister.astro'
-
-const { sidebar } = Astro.locals.starlightRoute
+import TopicsSidebar from 'starlight-sidebar-topics/overrides/Sidebar.astro'
 ---
 
-<SidebarPersister>
-  <SidebarSublist sublist={sidebar} />
-</SidebarPersister>
+<TopicsSidebar />
