@@ -1,21 +1,23 @@
 {
-  "name": "starlight-theme-black-category",
+  "name": "@hecatron/starlight-theme-black-category",
   "type": "module",
   "version": "0.7.1",
-  "description": "Starlight theme inspired by Shadcn docs",
+  "description": "Starlight theme inspired by Shadcn docs - modified for catagory sidebar",
   "author": "adrian-ub",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "funding": "https://github.com/sponsors/adrian-ub",
-  "homepage": "https://github.com/adrian-ub/starlight-theme-black-category",
+  "homepage": "https://github.com/Hecatron-Templates/starlight-theme-black-category",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrian-ub/starlight-theme-black-category.git",
+    "url": "https://github.com/Hecatron-Templates/starlight-theme-black-category.git",
     "directory": "packages/starlight-theme-black-category"
   },
-  "bugs": "https://github.com/adrian-ub/starlight-theme-black-category/issues",
+  "scripts": {
+    "upd": "bun update -i --latest",
+    "publish": "bun publish --access public"
+  },
   "exports": {
     ".": "./index.ts",
     "./schema": "./schema.ts",

@@ -1,31 +1,12 @@
-# starlight-theme-black
+# Readme
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![JSDocs][jsdocs-src]][jsdocs-href]
-[![License][license-src]][license-href]
+This is a fork of the original theme
 
-Starlight theme inspired by Shadcn docs
+  * https://starlight-theme-black.vercel.app
+  * https://starlight-theme-black.vercel.app
 
-## Sponsors
+This one has modifications for use with the topics sidebar menu
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/adrian-ub/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/adrian-ub/static/sponsors.svg'/>
-  </a>
-</p>
+  * https://starlight-sidebar-topics.netlify.app
 
-## License
-
-[MIT](./LICENSE) License © 2024-PRESENT [Adrián UB](https://github.com/adrian-ub)
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/starlight-theme-black-category?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/starlight-theme-black-category
-[npm-downloads-src]: https://img.shields.io/npm/dm/starlight-theme-black-category?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/starlight-theme-black-category
-[license-src]: https://img.shields.io/github/license/adrian-ub/starlight-theme-black-category.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/adrian-ub/starlight-theme-black-category/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/starlight-theme-black-category
+This is a modified theme I'm using for some of my own projects
