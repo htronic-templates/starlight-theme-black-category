@@ -1,19 +1,18 @@
 ---
 import { getNavbarLinks } from '../libs/navbar'
-import SidebarTopics from 'starlight-sidebar-topics/components/Sidebar.astro'
+import TopicsSidebar from 'starlight-sidebar-topics/overrides/Sidebar.astro'
 
-const { sidebar } = Astro.locals.starlightRoute
-const currentPath = Astro.url.pathname
 const navLinks = await getNavbarLinks(Astro.currentLocale)
 ---
 
 <div class="mobile-nav">
   <div class="mobile-nav-content">
 
-    <SidebarTopics />
-
     <div class="mobile-nav-section">
-      <div class="mobile-nav-label">{Astro.locals.t('menuButton.accessibleLabel')}</div>
+      <div class="mobile-nav-label">
+        {Astro.locals.t('menuButton.accessibleLabel')}
+      </div>
+
       <div class="mobile-nav-links">
         {
           navLinks.map((nav) => (
@@ -26,26 +25,10 @@ const navLinks = await getNavbarLinks(Astro.currentLocale)
       </div>
     </div>
 
-    {
-      sidebar.map(
-        (entry) =>
-          entry.type !== 'link' && (
-            <div class="mobile-nav-section">
-              <div class="mobile-nav-label">{entry.label}</div>
-              <div class="mobile-nav-links">
-                {entry.entries.map(
-                  (link) =>
-                    link.type === 'link' && (
-                      <a href={link.href} {...link.attrs} data-active={currentPath === link.href}>
-                        {link.label}
-                      </a>
-                    ),
-                )}
-              </div>
-            </div>
-          ),
-      )
-    }
+    <div class="topics-sidebar">
+      <TopicsSidebar />
+    </div>
+
   </div>
 </div>
 
@@ -119,5 +102,12 @@ const navLinks = await getNavbarLinks(Astro.currentLocale)
     background: #3b82f6;
     margin-left: calc(var(--spacing) * 1.5);
     flex-shrink: 0;
+  }
+  .topics-sidebar {
+    width: 100%;
+  }
+  .topics-sidebar :global(.sidebar-content) {
+    width: 100%;
+    padding: 0;
   }
 </style>

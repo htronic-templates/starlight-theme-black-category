@@ -13,6 +13,9 @@ export default defineConfig({
         light: './src/assets/logo-light.svg',
         alt: 'Starlight Black',
       },
+      customCss: [
+        './src/styles/themes/theme-apex.css',
+      ],
       editLink: {
         baseUrl: 'https://github.com/adrian-ub/starlight-theme-black-category/edit/main/docs/',
       },
