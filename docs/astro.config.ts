@@ -1,6 +1,6 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
-import starlightThemeBlack from 'starlight-theme-black-category'
+import starlightThemeBlack from '@hecatron/starlight-theme-black-category'
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 import starlightAutoDrafts from 'starlight-auto-drafts';
 import { generateSidebarGroups } from './src/sidebar_grps.mjs';
@@ -26,7 +26,7 @@ export default defineConfig({
               label: 'Home',
               link: '/',
             },
-            'getting-started',
+            'topic1',
             {
               label: 'Starlight',
               link: 'https://starlight.astro.build',

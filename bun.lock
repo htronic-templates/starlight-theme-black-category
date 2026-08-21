@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "starlight-theme-black-category-monorepo",
+      "name": "@hecatron/starlight-theme-black-category-monorepo",
       "devDependencies": {
         "@antfu/eslint-config": "^6.7.1",
         "@astrojs/starlight": "^0.41.3",
@@ -15,23 +15,22 @@
         "eslint-plugin-format": "^1.1.0",
         "lint-staged": "^16.2.7",
         "prettier-plugin-astro": "^0.14.1",
-        "simple-git-hooks": "^2.13.1",
       },
     },
     "docs": {
-      "name": "starlight-theme-black-category-docs",
+      "name": "@hecatron/starlight-theme-black-category-docs",
       "version": "0.0.1",
       "dependencies": {
         "@astrojs/starlight": "^0.41.3",
+        "@hecatron/starlight-theme-black-category": "workspace:*",
         "astro": "^7.0.9",
         "sharp": "^0.34.5",
         "starlight-auto-drafts": "^0.3.0",
         "starlight-sidebar-topics": "^0.8.0",
-        "starlight-theme-black-category": "workspace:*",
       },
     },
     "packages/starlight-theme-black-category": {
-      "name": "starlight-theme-black-category",
+      "name": "@hecatron/starlight-theme-black-category",
       "version": "0.7.1",
       "peerDependencies": {
         "@astrojs/starlight": ">=0.41",
@@ -217,6 +216,10 @@
     "@expressive-code/plugin-shiki": ["@expressive-code/plugin-shiki@0.44.1", "", { "dependencies": { "@expressive-code/core": "^0.44.1", "shiki": "^4.0.2" } }, "sha512-YApiZt3buUzBwL5tqj8G+sYC5NjMjRCHgQwr9bmGl69rtcHy6fE9dooWUeKYB978fJT2BuxT5FeHcF47rA3SEg=="],
 
     "@expressive-code/plugin-text-markers": ["@expressive-code/plugin-text-markers@0.44.1", "", { "dependencies": { "@expressive-code/core": "^0.44.1" } }, "sha512-B3BsJoJ8CFMlcIX9f+X9tcI3C4zPDO601+YuLi9GheSTNro7ZfqSjLptMQKBHOWZvxnAtY5zvIX7iO/qtBhNBg=="],
+
+    "@hecatron/starlight-theme-black-category": ["@hecatron/starlight-theme-black-category@workspace:packages/starlight-theme-black-category"],
+
+    "@hecatron/starlight-theme-black-category-docs": ["@hecatron/starlight-theme-black-category-docs@workspace:docs"],
 
     "@humanfs/core": ["@humanfs/core@0.19.2", "", { "dependencies": { "@humanfs/types": "^0.15.0" } }, "sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA=="],
 
@@ -1338,8 +1341,6 @@
 
     "signal-exit": ["signal-exit@4.1.0", "", {}, "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw=="],
 
-    "simple-git-hooks": ["simple-git-hooks@2.13.1", "", { "bin": { "simple-git-hooks": "cli.js" } }, "sha512-WszCLXwT4h2k1ufIXAgsbiTOazqqevFCIncOuUBZJ91DdvWcC5+OFkluWRQPrcuSYd8fjq+o2y1QfWqYMoAToQ=="],
-
     "sisteransi": ["sisteransi@1.0.5", "", {}, "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="],
 
     "sitemap": ["sitemap@9.0.1", "", { "dependencies": { "@types/node": "^24.9.2", "@types/sax": "^1.2.1", "arg": "^5.0.0", "sax": "^1.4.1" }, "bin": { "sitemap": "dist/esm/cli.js" } }, "sha512-S6hzjGJSG3d6if0YoF5kTyeRJvia6FSTBroE5fQ0bu1QNxyJqhhinfUsXi9fH3MgtXODWvwo2BDyQSnhPQ88uQ=="],
@@ -1365,10 +1366,6 @@
     "starlight-auto-drafts": ["starlight-auto-drafts@0.3.0", "", { "dependencies": { "github-slugger": "^2.0.0", "gray-matter": "^4.0.3", "tinyglobby": "^0.2.15" }, "peerDependencies": { "@astrojs/starlight": ">=0.38.0" } }, "sha512-c8ho4jtajCXCwxbkxSLtQVZ7IiTmEza80kVtWR9DDP4e9ECJzAcHihJQWSQigm9+OkJsbx+KrfPJCefSWOBe9Q=="],
 
     "starlight-sidebar-topics": ["starlight-sidebar-topics@0.8.0", "", { "dependencies": { "picomatch": "^4.0.3" }, "peerDependencies": { "@astrojs/starlight": ">=0.38.0" } }, "sha512-hE8+w2vNL13h6cq3UJGl05milJQ3+1BSlhaV5V4a993YzYczU6uLAj6jfUDKQ2mmgkdVWp8/UNDF4Je/rQXNQw=="],
-
-    "starlight-theme-black-category": ["starlight-theme-black-category@workspace:packages/starlight-theme-black-category"],
-
-    "starlight-theme-black-category-docs": ["starlight-theme-black-category-docs@workspace:docs"],
 
     "stream-replace-string": ["stream-replace-string@2.0.0", "", {}, "sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w=="],
 
@@ -1597,6 +1594,8 @@
     "svgo/commander": ["commander@11.1.0", "", {}, "sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ=="],
 
     "toml-eslint-parser/eslint-visitor-keys": ["eslint-visitor-keys@3.4.3", "", {}, "sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag=="],
+
+    "vue-eslint-parser/eslint-visitor-keys": ["eslint-visitor-keys@5.0.1", "", {}, "sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA=="],
 
     "wrap-ansi/ansi-styles": ["ansi-styles@6.2.3", "", {}, "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg=="],
 

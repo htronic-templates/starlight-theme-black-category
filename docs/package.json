@@ -1,5 +1,5 @@
 {
-  "name": "starlight-theme-black-category-docs",
+  "name": "@hecatron/starlight-theme-black-category-docs",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -30,6 +30,6 @@
     "sharp": "^0.34.5",
     "starlight-auto-drafts": "^0.3.0",
     "starlight-sidebar-topics": "^0.8.0",
-    "starlight-theme-black-category": "workspace:*"
+    "@hecatron/starlight-theme-black-category": "workspace:*"
   }
 }

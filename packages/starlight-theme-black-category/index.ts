@@ -38,10 +38,10 @@ export default function starlightThemeBlack(userConfig: StarlightThemeBlackUserC
           ),
           customCss: [
             ...(starlightConfig.customCss ?? []),
-            'starlight-theme-black-category/styles/layers',
-            'starlight-theme-black-category/styles/theme',
-            'starlight-theme-black-category/styles/base',
-	    'starlight-theme-black-category/styles/custom',
+            '@hecatron/starlight-theme-black-category/styles/layers',
+            '@hecatron/starlight-theme-black-category/styles/theme',
+            '@hecatron/starlight-theme-black-category/styles/base',
+	    '@hecatron/starlight-theme-black-category/styles/custom',
           ],
           expressiveCode:
             starlightConfig.expressiveCode === false

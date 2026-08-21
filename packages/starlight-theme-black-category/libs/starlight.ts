@@ -9,7 +9,7 @@ export function overrideComponents(
   const components = { ...starlightConfig.components }
   for (const override of overrides) {
     if ((starlightConfig.components?.[override]) != null) {
-      const fallback = `starlight-theme-black-category/overrides/${override}.astro`
+      const fallback = `@hecatron/starlight-theme-black-category/overrides/${override}.astro`
 
       logger.warn(`A \`<${override}>\` component override is already defined in your Starlight configuration.`)
       logger.warn(
@@ -17,7 +17,7 @@ export function overrideComponents(
       )
       continue
     }
-    components[override] = `starlight-theme-black-category/overrides/${override}.astro`
+    components[override] = `@hecatron/starlight-theme-black-category/overrides/${override}.astro`
   }
 
   return components
