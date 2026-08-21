@@ -1,0 +1,36 @@
+{
+  "name": "starlight-theme-black-category",
+  "type": "module",
+  "version": "0.7.1",
+  "description": "Starlight theme inspired by Shadcn docs",
+  "author": "adrian-ub",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": "https://github.com/sponsors/adrian-ub",
+  "homepage": "https://github.com/adrian-ub/starlight-theme-black-category",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrian-ub/starlight-theme-black-category.git",
+    "directory": "packages/starlight-theme-black-category"
+  },
+  "bugs": "https://github.com/adrian-ub/starlight-theme-black-category/issues",
+  "exports": {
+    ".": "./index.ts",
+    "./schema": "./schema.ts",
+    "./styles/base": "./styles/base.css",
+    "./styles/layers": "./styles/layers.css",
+    "./styles/theme": "./styles/theme.css",
+    "./components": "./user-components.ts",
+    "./overrides/*": "./overrides/*",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.41",
+    "starlight-sidebar-topics": "^0.8.0"
+  }
+}

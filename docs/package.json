@@ -1,0 +1,32 @@
+{
+  "name": "starlight-theme-black-category-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Starlight theme inspired by Shadcn docs",
+  "author": "adrian-ub",
+  "license": "MIT",
+  "homepage": "https://github.com/adrian-ub/starlight-theme-black-category",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrian-ub/starlight-theme-black-category.git",
+    "directory": "docs"
+  },
+  "bugs": "https://github.com/adrian-ub/starlight-theme-black-category/issues",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.41.3",
+    "astro": "^7.0.9",
+    "sharp": "^0.34.5",
+    "starlight-theme-black-category": "workspace:*"
+  }
+}

@@ -1,0 +1,266 @@
+---
+import { Icon } from '@astrojs/starlight/components'
+import { Image } from 'astro:assets'
+import { PAGE_TITLE_ID } from '../constants'
+import LinkButton from '../components/LinkButton.astro'
+
+const { data } = Astro.locals.starlightRoute.entry
+const { title = data.title, tagline: heroTagline, image, actions = [] } = data.hero || {}
+const heroLayout = data.hero?.layout || 'media-left'
+const announcement = data.hero?.announcement
+const hasImage = !!image
+const tagline = heroTagline || data.description
+
+const imageAttrs = {
+  loading: 'eager' as const,
+  decoding: 'async' as const,
+  width: 400,
+  height: 400,
+  alt: image?.alt || '',
+}
+
+let darkImage: ImageMetadata | undefined
+let lightImage: ImageMetadata | undefined
+let rawHtml: string | undefined
+if (image) {
+  if ('file' in image) {
+    darkImage = image.file
+  } else if ('dark' in image) {
+    darkImage = image.dark
+    lightImage = image.light
+  } else {
+    rawHtml = image.html
+  }
+}
+---
+
+<div class="hero" data-layout={heroLayout} data-has-image={hasImage ? '' : undefined}>
+  <div class="hero-image">
+    {darkImage && <Image src={darkImage} {...imageAttrs} class:list={{ 'light:sl-hidden': Boolean(lightImage) }} />}
+    {lightImage && <Image src={lightImage} {...imageAttrs} class="dark:sl-hidden" />}
+    {rawHtml && <div class="hero-html sl-flex" set:html={rawHtml} />}
+  </div>
+
+  <div class="hero-info">
+    <div class="hero-title-container">
+      {
+        announcement && (
+          <a class="announcement" href={announcement.link}>
+            {announcement.text}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <>
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </>
+            </svg>
+          </a>
+        )
+      }
+
+      <h1 id={PAGE_TITLE_ID} data-page-title set:html={title} />
+    </div>
+
+    <div class="hero-content-container">
+      {tagline && <div class="tagline" set:html={tagline} />}
+
+      {
+        actions.length > 0 && (
+          <div class="actions">
+            {actions.map(({ attrs: { class: className, ...attrs } = {}, icon, link: href, text, variant }) => (
+              <LinkButton {href} {variant} icon={icon?.name} class:list={[className]} {...attrs}>
+                {text}
+                {icon?.html && <Fragment set:html={icon.html} />}
+              </LinkButton>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .announcement {
+    text-decoration: none;
+    background-color: var(--muted);
+    color: var(--secondary-foreground);
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: calc(1 / 0.75);
+    padding-block: calc(var(--spacing) * 0.5);
+    padding-inline: calc(var(--spacing) * 2);
+    border-radius: 3.40282e38px;
+    overflow: hidden;
+    gap: calc(var(--spacing) * 1);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: fit-content;
+    display: inline-flex;
+  }
+
+  .announcement > svg {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 12);
+  }
+
+  .hero > img,
+  .hero > .hero-html {
+    object-fit: contain;
+    width: min(70%, 20rem);
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .hero-info {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+
+    @media (min-width: 768px) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+
+  .hero-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 1.1;
+      text-wrap-style: balance;
+      letter-spacing: var(--spacing-tighter);
+    }
+
+    @media (min-width: 768px) {
+      gap: calc(var(--spacing) * 4);
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .hero-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+
+    .tagline {
+      max-width: 56rem;
+      font-size: 1.125rem;
+      text-wrap: balance;
+      line-height: 1.75rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      padding-top: calc(var(--spacing) * 2);
+      gap: calc(var(--spacing) * 2);
+    }
+
+    @media (min-width: 768px) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+
+  .hero[data-layout='media-top'],
+  .hero[data-layout='banner'] {
+    flex-direction: column-reverse;
+    gap: calc(var(--spacing) * 20);
+    padding-block-end: calc(var(--spacing) * 8);
+  }
+
+  .hero[data-layout='banner'] {
+    @media (min-width: 1024px) {
+      .hero-info {
+        width: 100%;
+        flex-direction: row;
+        gap: calc(var(--spacing) * 16);
+
+        .hero-title-container {
+          flex: 1;
+          align-items: flex-start;
+          text-align: left;
+
+          h1 {
+            text-wrap-style: pretty;
+          }
+        }
+
+        .hero-content-container {
+          flex: 1;
+          align-items: flex-start;
+          align-self: flex-end;
+          text-align: left;
+
+          .tagline {
+            text-wrap-style: pretty;
+          }
+        }
+      }
+    }
+  }
+
+  .hero[data-layout='media-left'],
+  .hero[data-layout='media-right'] {
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: calc(var(--spacing) * 16);
+
+      .hero-info {
+        align-items: flex-start;
+
+        .hero-title-container {
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        .hero-content-container {
+          align-items: flex-start;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .hero[data-layout='media-left'] {
+    .hero-image {
+      order: 1;
+    }
+  }
+
+  .hero[data-layout='media-right'] {
+    .hero-image {
+      order: 0;
+    }
+  }
+</style>
