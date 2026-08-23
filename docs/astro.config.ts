@@ -14,7 +14,7 @@ export default defineConfig({
         alt: 'Starlight Black',
       },
       customCss: [
-        './src/styles/themes/theme-apex.css',
+        './src/styles/themes/theme-vescrow-1.2.css',
       ],
       editLink: {
         baseUrl: 'https://github.com/adrian-ub/starlight-theme-black-category/edit/main/docs/',
