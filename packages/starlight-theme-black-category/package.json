@@ -1,7 +1,7 @@
 {
   "name": "@hecatron/starlight-theme-black-category",
   "type": "module",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Starlight theme inspired by Shadcn docs - modified for catagory sidebar",
   "author": "adrian-ub",
   "license": "MIT",
