@@ -97,4 +97,10 @@ ul.starlight-sidebar-topics::after {
   border-top: none;
 }
 
-/* todo page width */
+/* Page width */
+div.main-pane {
+  max-width: calc(var(--spacing) * 300);
+}
+div.sl-container {
+  max-width: none;
+}
