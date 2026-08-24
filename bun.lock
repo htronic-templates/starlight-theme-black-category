@@ -32,6 +32,10 @@
     "packages/starlight-theme-black-category": {
       "name": "@hecatron/starlight-theme-black-category",
       "version": "0.7.1",
+      "dependencies": {
+        "@fontsource-variable/jetbrains-mono": "^5.3.0",
+        "@fontsource/roboto": "^5.3.0",
+      },
       "peerDependencies": {
         "@astrojs/starlight": ">=0.41",
         "starlight-sidebar-topics": "^0.8.0",
@@ -216,6 +220,10 @@
     "@expressive-code/plugin-shiki": ["@expressive-code/plugin-shiki@0.44.1", "", { "dependencies": { "@expressive-code/core": "^0.44.1", "shiki": "^4.0.2" } }, "sha512-YApiZt3buUzBwL5tqj8G+sYC5NjMjRCHgQwr9bmGl69rtcHy6fE9dooWUeKYB978fJT2BuxT5FeHcF47rA3SEg=="],
 
     "@expressive-code/plugin-text-markers": ["@expressive-code/plugin-text-markers@0.44.1", "", { "dependencies": { "@expressive-code/core": "^0.44.1" } }, "sha512-B3BsJoJ8CFMlcIX9f+X9tcI3C4zPDO601+YuLi9GheSTNro7ZfqSjLptMQKBHOWZvxnAtY5zvIX7iO/qtBhNBg=="],
+
+    "@fontsource-variable/jetbrains-mono": ["@fontsource-variable/jetbrains-mono@5.3.0", "", {}, "sha512-F32xpS2NsGYoQi2ADSkKTgpJj7ozajsGgDJ8woTnqjmIB+dxDIqImjl4pXZVEExu8UFZ2ndhmX18EBS/hdz3Lw=="],
+
+    "@fontsource/roboto": ["@fontsource/roboto@5.3.0", "", {}, "sha512-BapRJOWYP+LZ21zp+wBQjfpPYKRoxc4LspJ/RLuI+HSMBD5u/X4O+ESDrSvEqDSy0rAl7GwBJ+09mdc16cVQ1Q=="],
 
     "@hecatron/starlight-theme-black-category": ["@hecatron/starlight-theme-black-category@workspace:packages/starlight-theme-black-category"],
 
