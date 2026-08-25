@@ -105,7 +105,7 @@ export default function starlightThemeBlack(userConfig: StarlightThemeBlackUserC
                   },
                   {
                     provider: fontProviders.fontsource(),
-                    name: "JetBrains Mono Variable",
+                    name: "JetBrains Mono",
                     cssVariable: "--font-jetbrains-mono",
                   }
                 ]
