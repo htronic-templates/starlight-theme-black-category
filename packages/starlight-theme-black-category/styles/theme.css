@@ -1,7 +1,7 @@
 @layer black {
   :root:root {
-    --sl-font: var(--font-geist);
-    --sl-font-mono: var(--font-geist-mono);
+    --sl-font: var(--font-roboto);
+    --sl-font-mono: var(--font-jetbrains-mono);
   }
 
   :root[data-theme='dark'] {

@@ -90,16 +90,6 @@ export default function starlightThemeBlack(userConfig: StarlightThemeBlackUserC
                 fonts: [
                   {
                     provider: fontProviders.fontsource(),
-                    name: 'Geist Sans',
-                    cssVariable: "--font-geist",
-                  },
-                  {
-                    provider: fontProviders.fontsource(),
-                    name: 'Geist Mono',
-                    cssVariable: "--font-geist-mono",
-                  },
-                  {
-                    provider: fontProviders.fontsource(),
                     name: "Roboto",
                     cssVariable: "--font-roboto",
                   },
