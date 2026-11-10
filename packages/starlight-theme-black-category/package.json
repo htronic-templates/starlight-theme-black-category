@@ -1,17 +1,17 @@
 {
   "name": "@hecatron/starlight-theme-black-category",
   "type": "module",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Starlight theme inspired by Shadcn docs - modified for catagory sidebar",
   "author": "adrian-ub",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/Hecatron-Templates/starlight-theme-black-category",
+  "homepage": "https://github.com/htronic-templates/starlight-theme-black-category",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hecatron-Templates/starlight-theme-black-category.git",
+    "url": "https://github.com/htronic-templates/starlight-theme-black-category.git",
     "directory": "packages/starlight-theme-black-category"
   },
   "scripts": {
